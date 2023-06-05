@@ -1,13 +1,16 @@
 package com.ayseozcan.SBstart.service;
 
 import com.ayseozcan.SBstart.repository.IPersonelRepository;
-import lombok.RequiredArgsConstructor;
+import com.ayseozcan.SBstart.repository.entity.Personel;
+import com.ayseozcan.SBstart.utility.ServiceManager;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
-public class PersonelService {
+public class PersonelService extends ServiceManager<Personel,Long> {
     private final IPersonelRepository personelRepository;
 
-
+    public PersonelService(IPersonelRepository repository, IPersonelRepository personelRepository) {
+        super(repository);
+        this.personelRepository = personelRepository;
+    }
 }
