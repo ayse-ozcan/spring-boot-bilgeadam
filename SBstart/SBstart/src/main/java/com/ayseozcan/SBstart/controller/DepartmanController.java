@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * controller katmaninda web icin 2 kullanim sekli var
@@ -50,5 +51,9 @@ public class DepartmanController {
     @GetMapping("/findkonum")
     public List<Departman> findByKonum(String ad){
         return departmanService.findAllKonumAdi(ad);
+    }
+    @GetMapping("/finddepartmanbyad")
+    public Optional<Departman> findByAd(String ad){
+        return departmanService.findByAd(ad);
     }
 }

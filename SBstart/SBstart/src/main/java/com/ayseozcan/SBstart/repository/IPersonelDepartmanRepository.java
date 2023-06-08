@@ -8,4 +8,5 @@ import java.util.List;
 
 @Repository
 public interface IPersonelDepartmanRepository extends JpaRepository<PersonelDepartman,Long> {
+    List<PersonelDepartman> findByDepartmanid(Long id);
 }

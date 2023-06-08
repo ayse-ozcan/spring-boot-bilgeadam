@@ -1,4 +1,4 @@
-package com.ayseozcan.SBstart.repository.view;
+package com.ayseozcan.SBstart.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class VwDepartmanList {
+public class FindAllVwUserResponseDto {
     Long id;
     String ad;
+    String photo;
+    String acildurumkisisi;
 }

@@ -1,10 +1,12 @@
 package com.ayseozcan.SBstart.service;
 
+import com.ayseozcan.SBstart.exception.DepartmanNotFoundException;
 import com.ayseozcan.SBstart.repository.IDepartmanRepository;
 import com.ayseozcan.SBstart.repository.entity.Departman;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DepartmanService {
@@ -39,6 +41,17 @@ public class DepartmanService {
         return null;
     }
     public List<Departman> findAllKonumAdi(String konumad){
-        return departmanRepository.findAllByKonum(konumad);
+            return departmanRepository.findAllByKonum(konumad);
+    }
+
+    /**
+     *exception ornek
+     */
+    public Optional<Departman> findByAd(String ad){
+        if (departmanRepository.findOptionalByAd(ad).isEmpty()){
+            throw new DepartmanNotFoundException("Bu ada ait departman bulunamadi.");
+        }else{
+            return departmanRepository.findOptionalByAd(ad);
+        }
     }
 }

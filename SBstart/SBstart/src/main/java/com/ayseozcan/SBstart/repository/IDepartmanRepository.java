@@ -147,6 +147,7 @@ public interface IDepartmanRepository extends JpaRepository<Departman,Long> {
     List<Departman> konumaGoreGetir(String konum);
     @Query("select d from Departman d where d.ad = :departmanadi")
     Departman bulParametreIle(@Param("departmanadi") String ad);
+    //parametre adiyla param adi ayni olursa @param eklemeye gerek kalmaz.
 
     /**
      * DIKKAT!!!

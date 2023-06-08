@@ -1,4 +1,4 @@
-package com.ayseozcan.SBstart.repository.view;
+package com.ayseozcan.SBstart.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class VwDepartmanList {
-    Long id;
-    String ad;
+public class GetNameUpperCaseRequestDto {
+    String name;
+
 }
