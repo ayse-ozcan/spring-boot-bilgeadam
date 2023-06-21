@@ -1,0 +1,17 @@
+package com.ayseozcan.dto.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class DoktorResponseDto {
+    Long id;
+    String ad;
+    Long bransid;
+    String bransad;
+}

@@ -1,0 +1,34 @@
+# application.properties
+# server.port=8080
+# TODO: Dikkat! burada key-value pair seklinde yaziyoruz. Yani key ve value arasinda bir bosluk birakiyoruz.
+# server:
+#   port:9090 --> bu sekilde bitisik yazarsak hata aliriz.
+# server:
+# port: 9090 --> port direkt olarak server'in alt basligi olarak yazilmadigi icin hata aliriz.
+server:
+  port: 9090
+
+# spring.datasource.url
+# spring.datasource.username
+# spring.datasource.password
+# spring.datasource.driver-class-name
+
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/HastaneRandevuDb"
+    username: "postgres"
+    password: "*****"
+    driver-class-name: "org.postgresql.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+myapplication:
+  name: "Hastane Randevu Sistemi"
+  version: "1.0.0"
+  description: "Hastane Randevu Sistemi"
+
+#buraya istedigini yazabilirsin bir kurali yok!

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="${modelHome.getTitle()}"></h1>
+<p th:text="${modelHome.getContent()}"></p>
+<ul>
+    <li th:each="urun : ${modelHome.getUrunList()}" th:text="${urun}"></li>
+</ul>
+
+</body>
+</html>
