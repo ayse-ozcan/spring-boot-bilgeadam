@@ -1,0 +1,13 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.138.128:3306/yemeksepeti
+    username: ayse
+    password: 12345
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
